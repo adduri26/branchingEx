@@ -11,7 +11,7 @@ namespace WebApplication39
 {
 
 
-    public partial class Index
+    public partial class Contact
     {
 
         /// <summary>
