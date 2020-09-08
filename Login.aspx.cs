@@ -11,7 +11,27 @@ namespace WebApplication39
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            lblMsg.Visible = false;
+        }
 
+        protected void btn_Click(object sender, EventArgs e)
+        {
+            lblMsg.Visible = true;
+            if(string.IsNullOrEmpty(txtuname.Text)||(string.IsNullOrEmpty(txtupwd.Text)))
+            {
+                lblMsg.Text = "Username and Userpassword are mandatory!!";
+            }
+            else
+            {
+                if((txtuname.Text=="Sam1234")&&(txtupwd.Text=="Sam1234"))
+                {
+                    lblMsg.Text = "Login Success!!";
+                }
+                else
+                {
+                    lblMsg.Text = "Login Fail";
+                }
+            }
         }
     }
 }
